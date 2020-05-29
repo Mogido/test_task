@@ -3,65 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
     <title>Watch shop</title>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./slick/slick.min.js"></script>
 </head>
 <body>
     <header>
-        <p class="logo">AMST</p>
-        <h1>часы, которые выбирают сильные мужчины</h1>       
+        <h1> <span class="logo">AMST</span>
+        часы, которые выбирают сильные мужчины</h1>       
     </header>
     <main>
-        <section class="promo">
-            <p>хит продаж!</p>
-        </section>
-        <section class="bullets">
-            <ul>
+        <section class="advantages">
+            <div class="advantages__promo"><p>хит продаж!</p></div>
+            <ul class="advantages__bullets">
                 <li>стекло с сапфировым покрытием</li>
                 <li>противоударные и надежные</li>
                 <li>водонепроницаемый корпус</li>
             </ul>
-        </section>
-        <section class="achievments">
-            <img src="img/30 giorni.png">
-            <img src="img/100%.png">
+            <ul class="advantages__achievments">
+                <li><img src="img/30 giorni.png"></li>
+                <li><img src="img/100%.png"></li>
+            </ul>
         </section>
         <article class="main-content">
-            <img src="img/sale.png">
-            <img src="img/clock.png">
-            <ul>
-                <span>3 535k IDR</span>
-                <span>990 IDR</span>
+            <ul class="main-content__price">
+                <li>3 535k IDR</li>
+                <li>990k IDR</li>
             </ul>
             <-- place for timer -->
-            <button type="button">ЗАКАЗАТЬ</button>
+            <button id="open_button" class="main-content__button">ЗАКАЗАТЬ</button>
+            <section class="main-content__order-popup">
+                <form>
+                    <p>ОСТАВЬТЕ ВАШИ КОНТАКТНЫЕ ДАННЫЕ И НАШ МЕНЕДЖЕР 
+                        <span>СВЯЖЕТСЯ С ВАМИ!</span>
+                    </p>
+                    <label for="name">Пример: Василий Петров</label>
+                    <input id="name" type="text" placeholder="Ваше имя">
+                    <label for="tel">Пример: +79230098456</label>
+                    <input id="tel" type="tel" placeholder="Ваш номер телефона">
+                    <button id="close_button" class="main-content__button main-content__order-popup__button" type="submit">ЗАКАЗАТЬ</button>
+                </form>
+            </section>
         </article>
-        <section class="feedback">
-            <img src="img/stars.png">
-            <span>средний рейтинг</span>
-            <span>среди наших покупателей</span>
-            <button type="button">читать отзывы</button>
-        </section>
-        <section class="order-popup">
-            <form>
-                <label>Пример: Василий Петров
-                    <input type="text" placeholder="Ваше имя">
-                </label>
-                <label>Пример: +79230098456
-                    <input type="tel" placeholder="Ваш номер телефона">
-                </label>
-                <button type="submit">ЗАКАЗАТЬ</button>
-            </form>
-        </section>
-        <section class="feedback__gallery">
-            <--There would be slider -->
-        </section>
-        <section class="delivery">
-            <ul>
-                <li>Оставьте заявку и мы вам перезвоним</li>
-                <li>Оплата при получении</li>
-                <li>Доставка в течении 3-4 дней</li>
-            </ul>
-        </section>       
+        <section class="fd">
+            <section class="fd__feedback">
+                <img src="img/stars.png">
+                <span>средний рейтинг</span>
+                <span>среди наших покупателей</span>
+                <button type="button">читать отзывы</button>
+            </section>
+            <div class="fd__feedback__gallery">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <section class="fd__delivery">
+                <h2>доставка</h2>
+                <h2>оплата</h2>
+                <ul class="fd__delivery__list">
+                    <li>Оставьте заявку и мы вам перезвоним</li>
+                    <li>Оплата при получении</li>
+                    <li>Доставка в течении 3-4 дней</li>
+                </ul>
+            </section> 
+        </section>      
     </main>
 </body>
 </html>
