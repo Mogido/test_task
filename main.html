@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/TimeCircles.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Watch shop</title>
     <script src="./js/jquery.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./slick/slick.min.js"></script>
+    <script src="js/TimeCircles.js"></script>
 </head>
 <body>
     <header>
@@ -35,7 +35,12 @@
                 <li>3 535k IDR</li>
                 <li>990k IDR</li>
             </ul>
-            <-- place for timer -->
+            <div class="countdown-timer" data-date="2020-05-31 00:00:00"></div>
+            <div class="countdown-timer__label">
+                <span>часы</span>
+                <span>минуты</span>
+                <span>секунды</span>
+            </div>
             <button id="open_button" class="main-content__button">ЗАКАЗАТЬ</button>
             <section class="main-content__order-popup">
                 <form>
@@ -55,13 +60,53 @@
                 <img src="img/stars.png">
                 <span>средний рейтинг</span>
                 <span>среди наших покупателей</span>
-                <button type="button">читать отзывы</button>
+                <button id="gallery-button" type="button">читать отзывы</button>
             </section>
-            <div class="fd__feedback__gallery">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-            </div>
+            <section class="fd__feedback__gallery__container">
+                <button id="arrow-prev" class="fd__feedback__gallery__arrow" type="button"></button>
+                <div class="fd__feedback__gallery">
+                    <div class="fd__feedback__gallery__content">
+                        <div>
+                            <img src="./img/feedback_1.png" alt="Часы на руке">
+                        </div>
+                        <div class="fd__feedback__gallery__comment">
+                            <p>Влад Киров</p>
+                            <p>Пришли часы быстро, две недели в пути.</br>
+                            Упакованы были отлично, в воздушную подушку</br>
+                            и фирменную коробочку, бирки все присутствовали.</br>
+                            На выбор у продавца эти часики в трех оттенках: золото, серебро
+                            и в черном цвете.</p>
+                        </div>
+                    </div>
+                    <div class="fd__feedback__gallery__content">
+                        <div>
+                            <img src="./img/feedback_2.png" alt="Часы на руке">
+                        </div>
+                        <div class="fd__feedback__gallery__comment">
+                            <p>Влад Киров</p>
+                            <p>Пришли часы быстро, две недели в пути.</br>
+                            Упакованы были отлично, в воздушную подушку</br>
+                            и фирменную коробочку, бирки все присутствовали.</br>
+                            На выбор у продавца эти часики в трех оттенках: золото, серебро
+                            и в черном цвете.</p>
+                        </div>
+                    </div>
+                    <div class="fd__feedback__gallery__content">
+                        <div>
+                            <img src="./img/feedback_3.png" alt="Часы на руке">
+                        </div>
+                        <div class="fd__feedback__gallery__comment">
+                            <p>Влад Киров</p>
+                            <p>Пришли часы быстро, две недели в пути.</br>
+                            Упакованы были отлично, в воздушную подушку</br>
+                            и фирменную коробочку, бирки все присутствовали.</br>
+                            На выбор у продавца эти часики в трех оттенках: золото, серебро
+                            и в черном цвете.</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="arrow-next" class="fd__feedback__gallery__arrow fd__feedback__gallery__arrow--next" type="button"></button>
+            </section>
             <section class="fd__delivery">
                 <h2>доставка</h2>
                 <h2>оплата</h2>
@@ -73,5 +118,7 @@
             </section> 
         </section>      
     </main>
+    <script src="./slick/slick.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
