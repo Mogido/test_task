@@ -15,9 +15,7 @@
  **/
 (function($) {
 
-    //const dataSetter = document.getElementById("timer");
-
-    //dataSetter.dataset.date = "2020-06-01 00:00:00";
+    
 
     var useWindow = window;
     
@@ -653,6 +651,8 @@
         this.data.attributes.context.lineWidth = this.data.attributes.line_width;
 
         // line color
+        
+
         this.data.attributes.context.strokeStyle = color;
         this.data.attributes.context.stroke();
     };

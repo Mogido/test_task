@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="slick/slick.css">
-    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/TimeCircles.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Watch shop</title>
@@ -21,9 +21,18 @@
         <section class="advantages">
             <div class="advantages__promo"><p>хит продаж!</p></div>
             <ul class="advantages__bullets">
-                <li>стекло с сапфировым покрытием</li>
-                <li>противоударные и надежные</li>
-                <li>водонепроницаемый корпус</li>
+                <li>
+                    <img src="./img/Icon_1.png">
+                    <p>стекло с сапфировым покрытием</p>
+                </li>
+                <li>
+                    <img src="img/icon_2.png">
+                    <p>противоударные и надежные</p>
+                </li>
+                <li>
+                    <img src="img/icon_3.png">
+                    <p>водонепроницаемый корпус</p>
+                </li>
             </ul>
             <ul class="advantages__achievments">
                 <li><img src="img/30 giorni.png"></li>
@@ -35,7 +44,7 @@
                 <li>3 535k IDR</li>
                 <li>990k IDR</li>
             </ul>
-            <div class="countdown-timer" data-date="2020-05-31 00:00:00"></div>
+            <div id="timer" class="countdown-timer"></div>
             <div class="countdown-timer__label">
                 <span>часы</span>
                 <span>минуты</span>
@@ -108,8 +117,10 @@
                 <button id="arrow-next" class="fd__feedback__gallery__arrow fd__feedback__gallery__arrow--next" type="button"></button>
             </section>
             <section class="fd__delivery">
-                <h2>доставка</h2>
-                <h2>оплата</h2>
+                <div>
+                    <h2>доставка</h2>
+                    <h2>оплата</h2>
+                </div>
                 <ul class="fd__delivery__list">
                     <li>Оставьте заявку и мы вам перезвоним</li>
                     <li>Оплата при получении</li>
@@ -118,7 +129,7 @@
             </section> 
         </section>      
     </main>
-    <script src="./slick/slick.min.js"></script>
+    <script src="./js/slick.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
