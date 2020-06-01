@@ -53,7 +53,7 @@
 
 
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     color: #ffffff;
     font-family: "Roboto", Arial, sans-serif;
@@ -63,7 +63,10 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     height: 100vh;
+    background-color: #000000;
 }
+
+
 
 header {
     display: flex;
@@ -512,6 +515,10 @@ li {
 @media only screen and (max-width: 990px) {
 
 
+    header {
+        max-width: 100%
+    }
+
     body {
         height: 140vh;
     }
@@ -531,6 +538,7 @@ li {
     .advantages {
         flex-direction: row;
         flex-wrap: wrap;
+        max-width: 100%;
     }
 
     .advantages__promo {
@@ -540,7 +548,7 @@ li {
     .advantages__bullets {
         flex-direction: row;
         order: 1;
-        margin-top: 35vh;
+        margin-top: 60vh;
         width: 100%;
         justify-content: space-around;
         align-items: center;
@@ -576,12 +584,12 @@ li {
 
     .main-content {
         display: block;
-        width: 100%;
+        max-width: 100%;
     }
 
     .main-content__price {
         position: absolute;
-        top: 20vh;
+        top: 30vh;
         left: calc(50% - 220px);
     }
 
@@ -596,12 +604,12 @@ li {
     }
 
     .main-content__order-popup form {
-        width: 80vw;
+        width: 80%;
         margin: 0 auto;
     }
 
     .main-content__order-popup form p {
-        font-size: 0;
+        display: none;
     }
 
     .main-content__order-popup label {
@@ -609,9 +617,10 @@ li {
     }
 
     .main-content__order-popup input {
-        width: 80vw;
-        height: 12vh;
+        width: 100%;
+        height: 100px;
         font-size: 2rem;
+        margin: 0 auto;
     }
 
     .main-content__order-popup input::placeholder {
@@ -619,41 +628,41 @@ li {
     }
 
     .main-content__order-popup button {
-        width: 80vw;
-        height: 20vh;
+        width: 80%;
+        height: 150px;
         font-size: 4rem;
     }
 
     .fd {
         margin-top: 10vh;
-        width: 100%;
+        max-width: 100%;
     }
 
     .fd__feedback__gallery__container {
         display: block;
         position: relative;
-        width: 100%;
+        max-width: 100%;
         z-index: 0;
         top: 0;
         left: 0;
     }
 
     .fd__feedback__gallery {
-        width: 80vw;
+        width: 80%;
         z-index: 0;
     }
 
     .fd__feedback__gallery__arrow {
-        left: 3vw;
+        left: 3%;
     }
 
     .fd__feedback__gallery__arrow--next {
-        left: 86vw;
+        left: 86%;
     }
 
     .fd__delivery {
         width: 100%;
-        height: 100vh;
+        height: 600px;
     }
 
     .fd__delivery div {
@@ -662,7 +671,7 @@ li {
     }
 
     .fd__delivery h2 {
-        font-size: 4rem;
+        font-size: 4em;
     }
 
     .fd__delivery h2:first-child {
@@ -670,17 +679,169 @@ li {
     }
 
     .fd__delivery ul {
-        width: 90vw;
-        margin-bottom: 20vh;
+        width: 90%;
+        margin-bottom: 100px;
     }
 
     .fd__delivery li {
         font-size: 2.5rem;
-        width: 70vw;
+        width: 70%;
         margin-top: 5vh;
     }
     
     .fd__delivery__list li:not(:first-child) {
         margin-top: 10vh;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    header {
+        max-width: 100%;
+    }
+
+    header span {
+        font-size: 30px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    .advantages__promo {
+        width: 129.5px;
+        height: 36px;
+        font-size: 15px;
+        background-size: cover;
+    }
+
+    .advantages__promo p {
+        margin: 10px 0px 0px 15px;
+    }
+
+    .advantages__bullets {
+        margin-top: 130px;
+    }
+
+    .advantages__bullets li {
+        max-width: 50px;
+        font-size: 9px;
+    }
+
+    .advantages__achievments {
+        flex-grow: 2;
+    }
+
+
+    .main-content__price {
+        font-size: 19.02px;
+        width: 330px;
+        height: 50.25px;
+        background-size: 330px 50.25px;
+        left: calc(50% - 165px);
+        margin-top: 60px;
+    }
+    
+    .main-content__price li:first-child {
+        margin-right: 67.5px;
+    }
+    
+    .main-content__price li:last-child {
+        margin-right: 7.5px;
+    }
+    
+    .main-content__price::before {
+        font-size: 21.44px;
+        background-size: 262.5px 225px;
+        width: 262.5px;
+        height: 225px;
+        bottom: -112.5px;
+        left: -112.5px;
+        padding: 105px 0px 0px 0px;
+    }
+    
+    .main-content__price::after {
+        background-size: 363.75px 423px;
+        width: 363.75px;
+        height: 423px;
+        bottom: -105px;
+    }
+
+
+    .main-content__order-popup {
+        height: 400px;
+    }
+
+    .main-content__order-popup label {
+        font-size: 20px;
+    }
+
+    .main-content__order-popup input {
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .main-content__order-popup input::placeholder {
+        font-size: 20px;
+    }
+
+    .main-content__order-popup button {
+        font-size: 30px;
+        height: 80px;
+        margin-top: 20px;
+    }
+
+    .fd {
+        margin-top: 0;
+    }
+
+    .fd__feedback__gallery__container {
+        height: 400px;
+    }
+
+    .fd__feedback__gallery__content div:first-child {
+        height: 180px;
+    }
+
+    .fd__feedback__gallery__content img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fd__feedback__gallery__arrow {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+    }
+
+    .fd__feedback__gallery__arrow--next {
+        left: 91vw;
+    }
+
+    .fd__delivery div {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+
+    .fd__delivery h2 {
+        font-size: 3rem;
+    }
+
+    .fd__delivery li {
+        font-size: 1.5rem;
+    }
+
+    .fd__delivery__list {
+        margin-top: 0px;
+    }
+
+    .fd__delivery__list li {
+        margin-top: 0;
+        margin-bottom: 0px;
+    }
+
+    .fd__delivery__list li:not(:first-child) {
+        margin-top: 20px;
     }
 }
